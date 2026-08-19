@@ -157,6 +157,20 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+# toml files
+*.toml
+# uv lock files
+uv.lock
+uv.lock.json
+uv.lock.yaml
+uv.lock.yml
+uv.lock.json.lock
+uv.lock.yaml.lock
+uv.lock.yml.lock
+uv.lock.json.lock.lock
+uv.lock.yaml.lock.lock
+uv.lock.yml.lock.lock
+
 # Cython debug symbols
 cython_debug/
 

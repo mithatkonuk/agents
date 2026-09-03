@@ -4,12 +4,17 @@ from tools import tools, handle_tool_calls
 from styles import CSS, JS, EXAMPLES
 from dotenv import load_dotenv
 import gradio as gr
+import os
 
 load_dotenv(override=True)
 
-MODEL_NAME = "gpt-5.4-mini"
+MODEL_NAME = "openrouter/free"
+openrouter_api_key = os.getenv('OPENROUTER_API_KEY')
+openrouter_base_url= os.getenv('OPENROUTER_BASE_URL')
 
-openai = OpenAI()
+openai = OpenAI(base_url=openrouter_base_url, api_key=openrouter_api_key)
+
+
 
 system = [{"role": "system", "content": TWIN_SYSTEM_PROMPT}]
 
